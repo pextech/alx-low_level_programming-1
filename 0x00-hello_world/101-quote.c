@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
   * main - Prints 'and that piece of aret is useful
@@ -8,8 +8,9 @@
   */
 int main(void)
 {
-	fprintf(stderr,
-		"and that piece of art is useful\" - Dora Korpar, %d-%d-%d\n",
-		2015, 10, 19);
+	write(2,
+	      "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n",
+	      59);
+
 	return (1);
 }
